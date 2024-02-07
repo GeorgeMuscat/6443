@@ -1,3 +1,7 @@
+---
+layout: base
+---
+
 ## slides
 
 -   [week-01](week01)
