@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 6443
+title: COMP6443
 ---
 
 ## slides
