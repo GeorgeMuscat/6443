@@ -3,8 +3,13 @@ description:
 theme: minima
 show_downloads: false
 github:
-  is_project_page: false
+    is_project_page: false
 markup:
-  goldmark:
-    renderer:
-      unsafe: true
+    goldmark:
+        renderer:
+            unsafe: true
+minima:
+    skin: dark
+    social_links:
+        github: GeorgeMuscat
+        linkedin: george-muscat
