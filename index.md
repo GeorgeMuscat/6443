@@ -1,5 +1,3 @@
-# 6443
-
 ## slides
 
 -   [week-01](week01)
