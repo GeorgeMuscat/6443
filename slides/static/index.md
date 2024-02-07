@@ -1,18 +1,23 @@
+# 6443
+
 ## slides
-* [week-01](week01)
+
+-   [week-01](week01)
 
 &nbsp;
 
 ## resources
-* [tooling](resources/tooling)
+
+-   [tooling](resources/tooling)
 
 &nbsp;
 
 ## useful websites
-* [google.com](https://www.google.com)
+
+-   [google.com](https://www.google.com)
 
 &nbsp;
 
 ## Community stuff
-* Email me @ [g.muscat@unsw.edu.au]()
 
+-   Email me @ [g.muscat@unsw.edu.au]()
