@@ -23,4 +23,4 @@ title: COMP6443
 
 ## Community stuff
 
--   Email me @ [g.muscat@unsw.edu.au]()
+-   Email me @ [g.muscat@unsw.edu.au](MAILTO:g.muscat@unsw.edu.au)
