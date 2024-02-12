@@ -32,7 +32,6 @@ _TLDR: Don't be a dick_
 
 -   George Muscat
 -   4th Year CS (Security)
--   ***
 
 ## how to contact me
 
