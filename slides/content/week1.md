@@ -12,7 +12,7 @@ outputs: ['Reveal']
 
 # week01
 
-### COMP6443 H18A
+### COMP6443
 
 ---
 
