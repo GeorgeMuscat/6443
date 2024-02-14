@@ -11,7 +11,8 @@ title: COMP6443
 
 ## resources
 
--   [tooling](resources/tooling)
+-   [tools](resources/tools)
+-   [info](resoruces)
 
 &nbsp;
 

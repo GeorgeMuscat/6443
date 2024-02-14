@@ -14,6 +14,8 @@ outputs: ['Reveal']
 
 ### COMP6443
 
+Thanks Lachlan+Andrew for some of the slides
+
 ---
 
 ## Good faith policy
@@ -33,11 +35,20 @@ _TLDR: Don't be a dick_
 -   George Muscat
 -   4th Year CS (Security)
 
+---
+
 ## how to contact me
 
--   Email: g.muscat@unsw.edu.au <-- Offical Stuff
+-   Email: g.muscat@unsw.edu.au <-- Official Stuff
 -   Teams: George Muscat <-- Quicker Official Stuff
 -   [@woop.xyz]() on the SecSoc Discord <-- Unofficial Stuff
+
+---
+
+## useful info
+
+-   Everything is on WebCMS3
+-   Lectures are very important
 
 ---
 
@@ -51,9 +62,9 @@ _TLDR: Don't be a dick_
 
 ---
 
-## > whoareu
-
 {{% section %}}
+
+## > whoareu
 
 -   Your name, degree, year?
 -   Why'd you do the course?
@@ -88,7 +99,7 @@ _TLDR: Don't be a dick_
 
 -   you should do the majority of the hacking individually, however you can help each other when really stuck
 
--   within the same week, the number will (mostly) correspond with dificulty
+-   within the same week, the number will (mostly) correspond with difficulty
 
 -   most won't solve all the challenges. That is ok.
 
@@ -109,7 +120,7 @@ _TLDR: Don't be a dick_
 
 ## Recon
 
--   passive & active
+passive & active
 
 ---
 
@@ -143,8 +154,59 @@ Anything where you are interacting with the infra/site
 > if you use automated tools, pls dont use uni DNS servers, use these :)
 
 -   **NO BRUTEFORCING USING UNI DNS SERVERS**
--   Use these DNS servers: - Google - 8.8.8.8 - Cloudflare - 1.1.1.1 -
-    {{% /section %}}
+-   Use these DNS servers:
+    -   Google - 8.8.8.8
+    -   Cloudflare - 1.1.1.1
+
+---
+
+## DNS
+
+Things to know (or google):
+
+-   DNS
+-   A, AAAA, MX, PTR, TXT
+-   DoH
+
+---
+
+# Tools
+
+## Passive
+
+-   nslookup
+-   dig
+-   Google dorking
+-   crt.sh
+-   DNS Dumpster
+-   Wayback Machine
+-   Wolfram Alpha
+
+---
+
+## Active
+
+**NOTE**: When using these tools, ensure you rate limit yourself to avoid getting your IP restricted (Your family will hate this)
+
+-   nmap
+-   subbrute
+-   sublist3r
+-   dns recon
+
+These tools need wordlists, Seclists is a good place to start.
+
+---
+
+{{% /section %}}
+
+---
+
+## Activities
+
+-   Finish installing burp suite & setting up certs
+-   Signing up/logging into [ctfd.quoccabank.com]()
+-   Try out some of the challenges!
+    -   Recon stuffs
 
 ---
 
@@ -153,11 +215,3 @@ Anything where you are interacting with the infra/site
 > BurpSuite and ProxySwitchy oh my
 
 ---
-
-## Activities
-
--   Form groups for the reports (3 people)
--   Installing burp suite & setting up certs
--   Signing up/logging into [ctfd.quoccabank.com]()
--   Try out some of the challenges!
-    -   Recon stuffs
