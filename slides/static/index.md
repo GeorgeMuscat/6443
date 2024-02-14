@@ -12,7 +12,7 @@ title: COMP6443
 ## resources
 
 -   [tools](resources/tools)
--   [info](resoruces)
+-   [info](resources/info)
 
 &nbsp;
 

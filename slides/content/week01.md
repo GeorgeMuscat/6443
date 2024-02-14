@@ -193,9 +193,7 @@ Things to know (or google):
 -   sublist3r
 -   dns recon
 
-These tools need wordlists, Seclists is a good place to start.
-
----
+These tools need wordlists, Seclists is a good place to start
 
 {{% /section %}}
 
