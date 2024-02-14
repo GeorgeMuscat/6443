@@ -12,7 +12,7 @@ outputs: ['Reveal']
 
 # week01
 
-### COMP6443 H18A
+### COMP6443
 
 ---
 
@@ -20,7 +20,7 @@ outputs: ['Reveal']
 
 We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times
 
-_TLDR: Don't be a jerk_
+_TLDR: Don't be a dick_
 
 [sec.edu.au/good-faith-policy](https://sec.edu.au/good-faith-policy)
 
@@ -30,25 +30,22 @@ _TLDR: Don't be a jerk_
 
 ## > whoami
 
--   Lachlan
-
----
+-   George Muscat
+-   4th Year CS (Security)
 
 ## how to contact me
 
--   lachlan.waugh@student.unsw.edu.au
--   [@melon]() on the SecEdu Slack
--   [@melon]() on the SecSoc Discord
--   OpenLearning group (H18A Online)
+-   Email: g.muscat@unsw.edu.au <-- Offical Stuff
+-   Teams: George Muscat <-- Quicker Official Stuff
+-   [@woop.xyz]() on the SecSoc Discord <-- Unofficial Stuff
 
 ---
 
 ## places for course discussion
 
--   [seceduau.slack.com/signup](https://seceduau.slack.com/signup)
-    -   #cs6443
-    -   #cs6443-22t2-h16a
--   [discord.gg/???]()
+-   EdStem Forum (found via WebCMS3) <-- Official
+-   [secso.cc/discord](https://secso.cc/discord)
+    -   #cs6443-6843
 
 {{% /section %}}
 
@@ -58,15 +55,10 @@ _TLDR: Don't be a jerk_
 
 {{% section %}}
 
-![](../img/week01/icebreaker.jpg)
-
----
-
 -   Your name, degree, year?
 -   Why'd you do the course?
 -   What time did you sleep last night?
 -   Fun fact?
--   ~~Your credit card number and the 3 wacky digits on the back~~
 
 {{% /section %}}
 
@@ -75,8 +67,7 @@ _TLDR: Don't be a jerk_
 ## Questions
 
 -   Are tuts compulsory? No
--   Are they recorded? Yes
--   Where are these resources? [lwaugh.io/6443/]()
+-   Where are these resources? [muscat.sh/6443]()
 
 ---
 
@@ -86,7 +77,7 @@ _TLDR: Don't be a jerk_
 
 -   Wargames (10%)
 -   2 x PenTesting reports (40%)
--   Mid-term (0%)
+-   Mid-term (0%) (Ask if not sure)
 -   Final (50%)
 
 ---
@@ -95,18 +86,20 @@ _TLDR: Don't be a jerk_
 
 -   don't leave them to the last minute, you'll be sad :(
 
--   cool to collaborate/work together, but your flags need to be different.
+-   you should do the majority of the hacking individually, however you can help each other when really stuck
 
--   extended flags aren't _required_, but you should do them anyway (they're way cooler imo)
+-   within the same week, the number will (mostly) correspond with dificulty
+
+-   most won't solve all the challenges. That is ok.
 
 ---
 
 ## Report
 
 -   pentesting / vulnerability report
-    -   groups of 3-4
-    -   keep track of how you got found each of the flags
-    -   threats and remediation are really important
+    -   groups of 3 in this tutorial
+    -   **TAKE NOTES AS YOU GO**
+    -   really important
 
 {{% /section %}}
 
@@ -116,10 +109,32 @@ _TLDR: Don't be a jerk_
 
 ## Recon
 
-> I have some cool stuff @ [lwaugh.io/6443/resources/recon]()
+-   passive & active
 
--   active vs passive recon? what the heck is that
--   _TODO: maybe show some of it off?_
+---
+
+## Passive
+
+Finding information about the target without interacting with the infra/site
+
+A.K.A OSINT
+
+-   Google dorking
+-   Certificate records
+-   LinkedIn
+-   Shodan
+
+---
+
+## Active
+
+Anything where you are interacting with the infra/site
+
+-   DNS (incl. bruteforcing)
+-   Certificates
+-   Endpoints
+-   Source code
+-   Headers
 
 ---
 
@@ -127,19 +142,9 @@ _TLDR: Don't be a jerk_
 
 > if you use automated tools, pls dont use uni DNS servers, use these :)
 
--   Google - 8.8.8.8
--   Cloudflare - 1.1.1.1
-
-{{% /section %}}
-
----
-
-## Lecture content
-
--   web things??
--   hacking NASA
--   stealing money i think?
--   [link to the slides](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fmedia%2Eopenlearning%2Ecom%3A443%2FYeBDzZwyMePLbywk2UP9dScLxXrwUC68zPH4RxzXBivAM6tgYStqQKaYd75sPJuo%2E1653952985%2FCOMP6443%5FWeek%5F1%5Fv1%2E1%2Epptx&wdSlideId=256&wdModeSwitchTime=1654101511864)
+-   **NO BRUTEFORCING USING UNI DNS SERVERS**
+-   Use these DNS servers: - Google - 8.8.8.8 - Cloudflare - 1.1.1.1 -
+    {{% /section %}}
 
 ---
 
@@ -151,9 +156,8 @@ _TLDR: Don't be a jerk_
 
 ## Activities
 
--   Form groups for the reports (2-3 people)
--   Signing up/logging into QuoccaBank
--   Installing burp suite/setting up certs?
+-   Form groups for the reports (3 people)
+-   Installing burp suite & setting up certs
+-   Signing up/logging into [ctfd.quoccabank.com]()
 -   Try out some of the challenges!
     -   Recon stuffs
-    -   HTTP as a service
