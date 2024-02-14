@@ -4,10 +4,6 @@ layout: 'bundle'
 outputs: ['Reveal']
 ---
 
-## TODO: actually write some of my own stuff
-
----
-
 {{< slide class="center" >}}
 
 # week01
@@ -67,9 +63,8 @@ _TLDR: Don't be a dick_
 ## > whoareu
 
 -   Your name, degree, year?
--   Why'd you do the course?
 -   What time did you sleep last night?
--   Fun fact?
+-   Networks, frontend?
 
 {{% /section %}}
 
@@ -198,6 +193,25 @@ These tools need wordlists, Seclists is a good place to start
 {{% /section %}}
 
 ---
+
+## HTTP
+
+Hyper Text Trasfer Protocol
+
+-   First lecture!
+-   Headers are interesting and important
+    -   Method (GET/POST/PUT etc)
+    -   Host
+    -   Path
+    -   User-agent
+    -   Content-\[length/type\]
+    -   Origin
+
+---
+
+{{% section %}}
+
+## {{% /section %}}
 
 ## Activities
 
