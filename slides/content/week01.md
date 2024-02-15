@@ -196,9 +196,10 @@ These tools need wordlists, Seclists is a good place to start
 
 ## HTTP
 
-Hyper Text Trasfer Protocol
+Hyper Text Transfer Protocol
 
 -   First lecture!
+-   Format is important
 -   Headers are interesting and important
     -   Method (GET/POST/PUT etc)
     -   Host
