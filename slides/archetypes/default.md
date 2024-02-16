@@ -9,12 +9,15 @@ outputs: ["Reveal"]
 ---
 
 {{< slide class="center" >}}
+
 # {{ replace .Name "-" " " | title }}
-### T12A COMP1234 
+
+### T12A COMP1234
 
 ---
 
 ## Lecture review
+
 {{% section %}}
 
 {{% /section %}}
@@ -22,4 +25,5 @@ outputs: ["Reveal"]
 ---
 
 ## Thank you
+
 We're done!
