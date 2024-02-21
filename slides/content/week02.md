@@ -159,6 +159,7 @@ Insecure Direct Object Reference Vulnerability
 -   [hacktricks.xyz](https://book.hacktricks.xyz) (the bible)
 -   [cookie-editor](https://cookie-editor.com/)
 -   [jwt.io](https://jwt.io/)
+-   [CyberChef](https://gchq.github.io/CyberChef/)
 
 Note: _There will always be better tools, go find them_
 
