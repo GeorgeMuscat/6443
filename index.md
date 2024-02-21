@@ -6,6 +6,7 @@ title: COMP6443
 ## slides
 
 -   [week-01](week01)
+-   [week-02](week02)
 
 &nbsp;
 
