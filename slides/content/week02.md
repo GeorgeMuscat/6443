@@ -76,7 +76,7 @@ _TLDR: Don't be a dick_
 
 ### Cookies
 
--   Cookies are how session persistent is commonly implemented
+-   Cookies are used for session persistence
 -   Usually authentication data + other data
     -   Session
     -   Authentication Token
@@ -91,7 +91,7 @@ _TLDR: Don't be a dick_
 
 ### How 2 Hax Cookies
 
--   Targeted because cookies are used as authentication
+-   Cookies are used as authentication
 -   Can be stolen using:
     -   Cross-site scripting (XSS)
     -   MITM attacks
