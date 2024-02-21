@@ -3,6 +3,13 @@ layout: page
 title: tools
 ---
 
+## General
+
+-   Write your own scripts!
+-   [Flag Alert](https://featherbear.cc/UNSW-COMP6443/post/tools/flag_alert/) (Thanks Andrew)
+-   [OWASP Cheatsheet](https://cheatsheetseries.owasp.org/index.html)
+-   [hacktricks.xyz](https://book.hacktricks.xyz) (the bible)
+
 ## Recon
 
 ### Passive
@@ -21,3 +28,8 @@ title: tools
 -   [subbrute](https://github.com/TheRook/subbrute)
 -   [sublist3r](https://github.com/aboul3la/Sublist3r)
 -   [puredns](https://github.com/d3mondev/puredns)
+
+## Authentication/Authorisation
+
+-   [cookie-editor](https://cookie-editor.com/)
+-   [jwt.io](https://jwt.io/)
