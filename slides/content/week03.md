@@ -57,6 +57,7 @@ This is the law, watch.
 -   HSTS
 -   Authentication
     -   MFA
+    -   TOTP
     -   SSO + OAuth + SAML (Extended)
 -   Secrets
 
@@ -81,13 +82,59 @@ Public Key Infrastructure
     -   CA issues certs
     -   CAs sign certs with their root cert
     -   Root certs are stored in OS/Browsers
-
----
-
-## Trust
-
---
+-   Trust
 
 {{% /section %}}
 
-##
+---
+
+## HSTS
+
+HTTP Strict Transport Security
+
+-   Prevents MITM
+-   Policy enforced by browsers
+-   Common on bank sites etc
+
+---
+
+{{% section %}}
+
+## AuthN 2.0
+
+![/static/assets/img/herewegoagain.jpg]
+
+---
+
+## MFA
+
+Multi-factor Authentication
+
+-   Requiring multiple factors
+    -   Know
+    -   Have
+    -   Are
+-   Avoid duplicating same factor
+
+---
+
+## TOTP
+
+Time-based One-Time Password
+
+-   Unique codes
+-   Short lifetime
+-   [RFC6238](https://datatracker.ietf.org/doc/html/rfc6238)
+
+---
+
+## SSO + SAML + OAuth
+
+-   Single Sign On
+-   Security Assertion Markup Language
+    -   Authentication
+-   [OAuth 2.0](https://oauth.net/2/)
+    -   Authorisation
+-   Useful [Link](https://www.cloudflare.com/learning/access-management/what-is-oauth/)
+
+{{% / section %}}
