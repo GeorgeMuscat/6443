@@ -45,6 +45,13 @@ Key things:
 
 This is the law, watch.
 
+---
+
+## Examples
+
+-   [Professional](https://www.offsec.com/reports/sample-penetration-testing-report.pdf)
+-   [Andrew](https://docs.google.com/document/d/1dVXbABRPlAic2oNHqafXKrGmOYFSha-8_4kfLE_ilbQ/edit)
+
 {{% /section %}}
 
 ---
