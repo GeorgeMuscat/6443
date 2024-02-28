@@ -85,6 +85,7 @@ Public Key Infrastructure
 ## Certificates
 
 -   TLS (and mTLS)
+    -   [Handshake](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
 -   Certificate Authorities (CA)
     -   CA issues certs
     -   CAs sign certs with their root cert
@@ -101,7 +102,7 @@ HTTP Strict Transport Security
 
 -   Prevents MITM
 -   Policy enforced by browsers
--   Common on bank sites etc
+-   Common on financial and (some) govt. [sites](https://paypal.com/)
 
 ---
 
@@ -121,7 +122,7 @@ Multi-factor Authentication
     -   Know
     -   Have
     -   Are
--   Avoid duplicating same factor
+-   Avoid requiring same type of factor
 
 ---
 
