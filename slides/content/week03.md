@@ -110,7 +110,7 @@ HTTP Strict Transport Security
 
 ## AuthN 2.0
 
-![/assets/img/herewegoagain.jpg]
+![/6443/assets/img/herewegoagain.jpg]
 
 ---
 
