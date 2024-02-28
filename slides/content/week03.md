@@ -6,7 +6,7 @@ outputs: ['Reveal']
 
 {{< slide class="center" >}}
 
-# {{ replace .Name "-" " " | title }}
+# Week03
 
 ---
 
