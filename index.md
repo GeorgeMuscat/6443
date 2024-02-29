@@ -7,6 +7,7 @@ title: COMP6443
 
 -   [week-01](week01)
 -   [week-02](week02)
+-   [week-03](week03)
 
 &nbsp;
 
@@ -14,12 +15,6 @@ title: COMP6443
 
 -   [tools](resources/tools)
 -   [info](resources/info)
-
-&nbsp;
-
-## useful websites
-
--   [google.com](https://www.google.com)
 
 &nbsp;
 
