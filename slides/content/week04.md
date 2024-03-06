@@ -8,6 +8,7 @@ outputs: ['Reveal']
 
 # Week04
 
+Thanks Lachlan and Andrew for some content
 {{% section %}}
 
 ---
@@ -160,6 +161,12 @@ You should be asking:
 
 ---
 
+# Demo
+
+Thanks Andrew
+
+---
+
 {{% / section %}}
 
 ## SQLi Mitigation
@@ -195,12 +202,72 @@ You should be asking:
 
 ---
 
+{{% section %}}
+
 ## Other Injection
 
 ### SSTI
 
 Server side template injection
 
--   Jinja Templates
--   php
--
+-   Jinja
+-   Twig
+-   Plates
+
+---
+
+## SSTI Example
+
+In the backend:
+`output = template.render(name=request.args.get('name'))`
+
+Attacker requests:
+`http://vulnerable-website.com/?name={{bad-stuff}}`
+
+`bad-stuff` could be code to execute
+
+---
+
+## SSTI Demo
+
+Thanks Lachlan
+
+{{% / section %}}
+
+---
+
+{{% section %}}
+
+## SSRF
+
+Server-side request forgery
+
+-   HaaS
+-   Making a server in the target network make request on your behalf
+-   Used to access servers that might not be public
+-   Some servers trust internal requests (bad authz)
+
+---
+
+## Why SSRF
+
+Utilising functionalities of a server to access resources
+
+-   Information retrieval
+-   Can lead to RCE
+-   Server Side Includes
+-   Horizontal/vertical priv. esc.
+
+---
+
+## Mitigation
+
+-   Whitelist domains and IPs!
+-   Lower the access control of services
+-   Set limits! exec time, file sizes, recursion depth
+-   Zero Trust
+    -   Local devices should NOT be assumed to be safe
+
+{{% / section %}}
+
+---
