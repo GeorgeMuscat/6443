@@ -8,6 +8,7 @@ title: COMP6443
 -   [week-01](week01)
 -   [week-02](week02)
 -   [week-03](week03)
+-   [week-04](week04)
 
 &nbsp;
 
