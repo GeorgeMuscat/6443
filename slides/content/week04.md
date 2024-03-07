@@ -9,7 +9,6 @@ outputs: ['Reveal']
 # Week04
 
 Thanks Lachlan and Andrew for some content
-{{% section %}}
 
 ---
 
