@@ -10,4 +10,8 @@ Admin Challenges WebCMS3 Create report groups (will do later) Correction: Points
 Report Key things:
 Report Groups Format Due date + submission Important Parts LINKED TABLE OF CONTENTS Linked appendix for: verbose definitions screenshots code long payloads Should address vulnerability, not flag Memes only outside of content Lectures This is the law, watch.
 Examples Professional Andrew Content PKI Certificates Trust HSTS Authentication MFA TOTP SSO + OAuth + SAML (Extended) Secrets PKI Public Key Infrastructure
-Used to determine who is/owns something Uses Certificates Based on trust Certificates TLS (and mTLS) Handshake Certificate Authorities (CA) CA issues certs CAs sign certs with their root cert Root certs are stored in OS/Browsers Trust HSTS HTTP Strict Transport Security</description></item></channel></rss>
+Used to determine who is/owns something Uses Certificates Based on trust Certificates TLS (and mTLS) Handshake Certificate Authorities (CA) CA issues certs CAs sign certs with their root cert Root certs are stored in OS/Browsers Trust HSTS HTTP Strict Transport Security</description></item><item><title>04: Injection (pt 1)</title><link>/week04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week04/</guid><description>Week04 Thanks Lachlan and Andrew for some content
+Review Any questions about previous content?
+Content Injection SQLi SSTI SSRF Injection Injection attacks occur when an attacker injects malicious data that is then used to control program behaviour
+SQL Structured Query Language
+Language for querying databases Implementations include: PostgreSQL MySQL SQLite SQL Server (Microsoft) SQL Statements SELECT _ FROM _ &amp;hellip; INSERT INTO _ (COLn, &amp;hellip;) VALUES (VALn, &amp;hellip;) UPDATE _ SET _ = _ &amp;hellip; DELETE FROM _ &amp;hellip; &amp;hellip; &amp;ndash; this is a comment &amp;hellip; # this can also be a comment (sometimes) … SQL Syntax WHERE</description></item></channel></rss>
