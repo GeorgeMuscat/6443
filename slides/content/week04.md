@@ -164,9 +164,9 @@ You should be asking:
 
 Thanks Andrew
 
----
-
 {{% / section %}}
+
+---
 
 ## SQLi Mitigation
 
