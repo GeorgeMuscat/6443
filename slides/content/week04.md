@@ -154,8 +154,8 @@ You should be asking:
 
 -   what tables exist, what do they look like?
 
-    -   **MySQL**: `information*schema.[tables|columns]`
-    -   **SQLite**: `sqlite*[master|schema]`
+    -   **MySQL**: `information_schema.[tables|columns]`
+    -   **SQLite**: `sqlite_[master|schema]`
     -   **SQL Server**: `SHOW TABLES; DESCRIBE <table_name>`
 
 ---
