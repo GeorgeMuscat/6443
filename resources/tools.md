@@ -34,3 +34,8 @@ title: tools
 
 -   [cookie-editor](https://cookie-editor.com/)
 -   [jwt.io](https://jwt.io/)
+
+## Webhooks
+
+-   [requestbin](https://public.requestbin.com/r)
+-   [webhook.site](https://webhook.site/)
