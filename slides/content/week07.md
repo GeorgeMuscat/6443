@@ -160,6 +160,8 @@ site = <u><span style="color: #00b050">dom</span><span style="color: #007133">ai
 
 ---
 
+{{% section %}}
+
 ### XSS
 
 -   User input is rendered as HTML
