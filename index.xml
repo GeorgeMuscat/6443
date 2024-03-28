@@ -18,5 +18,4 @@ Language for querying databases Implementations include: PostgreSQL MySQL SQLite
 Good Faith Policy We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.
 TLDR: Don&amp;rsquo;t be a dick
 sec.edu.au/good-faith-policy
-Questions? {{ % section % }}
-Client Side Injection WWW Everything is a document Origin vs Site HTML + JS DOM XSS Source + Sink Goals Exfiltration Methods CSRF WAF Bypass Encoding Other tricks Prevention CORS SOP CSP {{ % /section % }}</description></item></channel></rss>
+Questions? Client Side Injection WWW Everything is a document Origin vs Site HTML + JS DOM XSS Source + Sink Goals Exfiltration Methods CSRF WAF Bypass Encoding Other tricks Prevention CORS SOP CSP WWW World Wide Web Everything is a document How those documents is client dependent HTML, JS, VBScript DOM Document Object Model An API for scripting languages to interact with web documents document.</description></item></channel></rss>
