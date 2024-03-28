@@ -28,7 +28,7 @@ _TLDR: Don't be a dick_
 
 ---
 
-{{ % section % }}
+{{% section %}}
 
 ## Client Side Injection
 
@@ -53,11 +53,11 @@ _TLDR: Don't be a dick_
     -   SOP
     -   CSP
 
-{{ % /section % }}
+{{% /section %}}
 
 ---
 
-{{ % section % }}
+{{% section %}}
 
 ## WWW
 
@@ -117,7 +117,7 @@ _TLDR: Don't be a dick_
 
 ###
 
-{{ % /section % }}
+{{% /section %}}
 
 ---
 
@@ -333,7 +333,7 @@ Generally XSS is performed in the background
 
 ---
 
-{{ % section % }}
+{{% section %}}
 
 ## CSP
 
@@ -367,7 +367,7 @@ Generally XSS is performed in the background
     -   Insert own header
     -   [Split the response](https://github.com/featherbear/demo-response-header-splitting)
 
-{{ % /section % }}
+{{% /section %}}
 
 ---
 
