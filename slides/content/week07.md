@@ -41,7 +41,7 @@ _TLDR: Don't be a dick_
     -   Source + Sink
     -   Goals
     -   Exfiltration Methods
--   ## CSRF
+-   CSRF
 
 ---
 
@@ -112,10 +112,6 @@ _TLDR: Don't be a dick_
 -   `fetch()`
 -   [hacktricks.xyz](https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting)
 -   [portswigger](https://portswigger.net/web-security)
-
----
-
-###
 
 {{% /section %}}
 
@@ -353,7 +349,7 @@ Generally XSS is performed in the background
 
 -   Policy defined in HTTP headers or HTML tags
     -   HTTP is better
--   ## Various settings
+-   Various settings
 
 ---
 
@@ -375,8 +371,10 @@ Generally XSS is performed in the background
 
 ## [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
+-   Default browser behaviour to prevent sharing cross origin
+    -   So cookies/local storage aren't shared
 -   Set in HTTP headers
--   Set which origins a browser is allowed to load resources from
+-   Set which origins other than its own that can load its resources
 -   Used with SOP
 
 ---
@@ -385,10 +383,10 @@ Generally XSS is performed in the background
 
 [Same-Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
 
--   Restricts what how resources from an external origin (e.g. script) can interact with this origin
+-   Restricts how resources from origin A (e.g. script) can interact with a resource from origin B
+-   Applies only to scripts
+    -   Can use non-scripting attacks to beat
 -   Used with CORS
-
----
 
 ### Webhooks
 
