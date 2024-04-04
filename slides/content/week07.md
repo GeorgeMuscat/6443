@@ -388,6 +388,8 @@ Generally XSS is performed in the background
     -   Can use non-scripting attacks to beat
 -   Used with CORS
 
+---
+
 ### Webhooks
 
 -   Useful for exfiltrating data
