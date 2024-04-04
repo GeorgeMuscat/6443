@@ -396,6 +396,8 @@ Generally XSS is performed in the background
 -   [requestbin](https://public.requestbin.com/r)
 -   [webhook.site](https://webhook.site/)
 
+---
+
 ### WAF Bypass
 
 -   can use / instead of spaces
