@@ -16,7 +16,7 @@ title: COMP6443
 ## resources
 
 -   [tools](resources/tools)
--   [info](resources/info)
+-   [checklist](resources/list)
 
 &nbsp;
 
