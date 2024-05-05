@@ -8,7 +8,7 @@ title: tools
 -   Write your own scripts!
 -   [Flag Alert](https://featherbear.cc/UNSW-COMP6443/post/tools/flag_alert/) (Thanks Andrew)
 -   [OWASP Cheatsheet](https://cheatsheetseries.owasp.org/index.html)
--   [hacktricks.xyz](https://book.hacktricks.xyz) (the bible)
+-   [HackTricks](https://book.hacktricks.xyz) (the bible)
 -   [cyberchef](https://gchq.github.io/CyberChef/)
 
 ## Recon
@@ -39,3 +39,9 @@ title: tools
 
 -   [requestbin](https://public.requestbin.com/r)
 -   [webhook.site](https://webhook.site/)
+
+## XSS Payloads
+
+-   [tinyxss](https://tinyxss.terjanq.me/)
+-   [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
+-   [HackTricks](https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting)
