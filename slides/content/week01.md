@@ -28,6 +28,7 @@ _TLDR: Don't be a dick_
 ## > whoami
 
 George Muscat
+
 Senior Security Engineering Consultant @ Asontu
 
 ---
@@ -71,7 +72,7 @@ Email: g.muscat@unsw.edu.au
 
 -   Are tuts compulsory? 
     - No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can
--   Where are these resources? [muscat.sh/6443]()
+-   Where are these resources? [muscat.sh/6443](https://muscat.sh/6443)
 
 ---
 
@@ -217,7 +218,7 @@ Hyper Text Transfer Protocol
 ## Activities
 
 -   Finish installing burp suite & setting up certs
--   Signing up/logging into [ctfd.quoccacorp.com]()
+-   Signing up/logging into [ctfd.quoccacorp.com](https://ctfd.quoccacorp.com)
 -   [Intro challenges](https://github.com/secedu/COMP6443-intro-challenges)
 -   Try out some of the challenges!
 
