@@ -1,21 +1,458 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TEMPLATE</title><link>/</link><description>Recent content on TEMPLATE</description><generator>Hugo</generator><language>en-au</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>01: intro</title><link>/week01/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week01/</guid><description>week01 COMP6443 Thanks Lachlan+Andrew for some of the slides
-Good faith policy We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times
-TLDR: Don&amp;rsquo;t be a dick
-sec.edu.au/good-faith-policy
-&amp;gt; whoami George Muscat 4th Year CS (Security) how to contact me Email: g.muscat@unsw.edu.au &amp;lt;&amp;ndash; Official Stuff Teams: George Muscat &amp;lt;&amp;ndash; Quicker Official Stuff @woop.</description></item><item><title>02: Auth[ZN]</title><link>/week02/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week02/</guid><description>week02 COMP6443 Thanks Lachlan+Andrew for some of the slides
-Good Faith Policy We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.
-TLDR: Don&amp;rsquo;t be a dick
-sec.edu.au/good-faith-policy
-Admin Challenges WebCMS3 Create report groups (will do later) Correction: Points to not necessarily indicate difficulty Challenges Flags for approximately a CR Sales flag 3 Blogs Files Support Due Sunday 3/3 Content HTTP + TLS Status Codes Authentication Sessions Tokens (JWT, Flask, Express etc) Cookies Authorization Permission control IDOR Authentication Verifying that your identity is authentic Factors of authentication are something you Know (e.</description></item><item><title>03: Auth &amp; Trust</title><link>/week03/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week03/</guid><description>Week03 Feedback less/same/more yapping?
-Report Key things:
-Report Groups Format Due date + submission Important Parts LINKED TABLE OF CONTENTS Linked appendix for: verbose definitions screenshots code long payloads Should address vulnerability, not flag Memes only outside of content Lectures This is the law, watch.
-Examples Professional Andrew Content PKI Certificates Trust HSTS Authentication MFA TOTP SSO + OAuth + SAML (Extended) Secrets PKI Public Key Infrastructure
-Used to determine who is/owns something Uses Certificates Based on trust Certificates TLS (and mTLS) Handshake Certificate Authorities (CA) CA issues certs CAs sign certs with their root cert Root certs are stored in OS/Browsers Trust HSTS HTTP Strict Transport Security</description></item><item><title>04: Injection (pt 1)</title><link>/week04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week04/</guid><description>Week04 Thanks Lachlan and Andrew for some content
-Review Any questions about previous content?
-Content Injection SQLi SSTI SSRF Injection Injection attacks occur when an attacker injects malicious data that is then used to control program behaviour
-SQL Structured Query Language
-Language for querying databases Implementations include: PostgreSQL MySQL SQLite SQL Server (Microsoft) SQL Statements SELECT _ FROM _ &amp;hellip; INSERT INTO _ (COLn, &amp;hellip;) VALUES (VALn, &amp;hellip;) UPDATE _ SET _ = _ &amp;hellip; DELETE FROM _ &amp;hellip; &amp;hellip; &amp;ndash; this is a comment &amp;hellip; # this can also be a comment (sometimes) … SQL Syntax WHERE</description></item><item><title>07: Client Side Injection</title><link>/week07/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week07/</guid><description>week07 COMP6443 Thanks Lachlan+Andrew for some of the slides
-Good Faith Policy We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.
-TLDR: Don&amp;rsquo;t be a dick
-sec.edu.au/good-faith-policy
-Questions? Client Side Injection WWW Everything is a document Origin vs Site HTML + JS DOM XSS Source + Sink Goals Exfiltration Methods CSRF WAF Bypass Encoding Other tricks Prevention CORS SOP CSP WWW World Wide Web Everything is a document How those documents is client dependent HTML, JS, VBScript DOM Document Object Model An API for scripting languages to interact with web documents document.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TEMPLATE</title><link>/</link><description>Recent content on TEMPLATE</description><generator>Hugo</generator><language>en-au</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>01: intro</title><link>/week01/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week01/</guid><description>&lt;section data-noprocess data-shortcode-slide
+ class="center"&gt;
+ 
+&lt;h1 id="week01"&gt;week01&lt;/h1&gt;
+&lt;h3 id="comp6443"&gt;COMP6443&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id="good-faith-policy"&gt;Good faith policy&lt;/h2&gt;
+&lt;p&gt;We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TLDR: Don&amp;rsquo;t be a dick&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://sec.edu.au/good-faith-policy"&gt;sec.edu.au/good-faith-policy&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="-whoami"&gt;&amp;gt; whoami&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;George Muscat&lt;/li&gt;
+&lt;li&gt;Senior Security Engineering Consultant @ Asontu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="how-to-contact-me"&gt;how to contact me&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Email: &lt;a href="mailto:g.muscat@unsw.edu.au"&gt;g.muscat@unsw.edu.au&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="useful-info"&gt;useful info&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Everything is on WebCMS3&lt;/li&gt;
+&lt;li&gt;Lectures are very important&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="places-for-course-discussion"&gt;places for course discussion&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Discourse &amp;lt;&amp;ndash; Official&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://secso.cc/discord"&gt;secso.cc/discord&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;#cs6443-6843&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="-whoareu"&gt;&amp;gt; whoareu&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Your name, degree, year?&lt;/li&gt;
+&lt;li&gt;What time did you sleep last night?&lt;/li&gt;
+&lt;li&gt;Networks, frontend?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+&lt;h2 id="questions"&gt;Questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Are tuts compulsory? No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can&lt;/li&gt;
+&lt;li&gt;Where are these resources? &lt;a href=""&gt;muscat.sh/6443&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="course-content"&gt;Course content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wargames (20%)&lt;/li&gt;
+&lt;li&gt;2 x PenTesting reports (15% + 15%)
+&lt;ul&gt;
+&lt;li&gt;Groups of 3 (can be cross tut)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Mid-term (0%) (Ask if not sure)&lt;/li&gt;
+&lt;li&gt;Final (50%)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Check WebCMS3 and first Lecture&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>02: Auth[ZN]</title><link>/week02/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week02/</guid><description>&lt;section data-noprocess data-shortcode-slide
+ class="center"&gt;
+ 
+&lt;h1 id="week02"&gt;week02&lt;/h1&gt;
+&lt;h3 id="comp6443"&gt;COMP6443&lt;/h3&gt;
+&lt;p&gt;Thanks Lachlan+Andrew for some of the slides&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="good-faith-policy"&gt;Good Faith Policy&lt;/h2&gt;
+&lt;p&gt;We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TLDR: Don&amp;rsquo;t be a dick&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://sec.edu.au/good-faith-policy"&gt;sec.edu.au/good-faith-policy&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="admin"&gt;Admin&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Challenges
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://webcms3.cse.unsw.edu.au/COMP6443/24T1/resources/95202"&gt;WebCMS3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create report groups (will do later)&lt;/li&gt;
+&lt;li&gt;Correction: Points to not necessarily indicate difficulty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="challenges"&gt;Challenges&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Flags for approximately a CR
+&lt;ul&gt;
+&lt;li&gt;Sales flag&lt;/li&gt;
+&lt;li&gt;3 Blogs&lt;/li&gt;
+&lt;li&gt;Files&lt;/li&gt;
+&lt;li&gt;Support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Due Sunday 3/3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="content"&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP + TLS
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://http.cat/"&gt;Status Codes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Authentication
+&lt;ul&gt;
+&lt;li&gt;Sessions&lt;/li&gt;
+&lt;li&gt;Tokens (&lt;a href="https://jwt.io/"&gt;JWT&lt;/a&gt;, Flask, Express etc)&lt;/li&gt;
+&lt;li&gt;Cookies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Authorization
+&lt;ul&gt;
+&lt;li&gt;Permission control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IDOR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="authentication"&gt;Authentication&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Verifying that your identity is &lt;strong&gt;authentic&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Factors of authentication are something you
+&lt;ul&gt;
+&lt;li&gt;Know (e.g. Password)&lt;/li&gt;
+&lt;li&gt;Are (e.g. Biometric)&lt;/li&gt;
+&lt;li&gt;Have (e.g. Hardware Key + Cookie)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Status Code &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401"&gt;401&lt;/a&gt; Unauthorized
+&lt;ul&gt;
+&lt;li&gt;When no valid authentication is sent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="authentication-1"&gt;Authentication&lt;/h2&gt;
+&lt;h3 id="cookies"&gt;Cookies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookies are used for session persistence&lt;/li&gt;
+&lt;li&gt;Usually authentication data + other data
+&lt;ul&gt;
+&lt;li&gt;Session&lt;/li&gt;
+&lt;li&gt;Authentication Token&lt;/li&gt;
+&lt;li&gt;Ad tracking (still identification)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set (and stored) by the server and sent to the client&lt;/li&gt;
+&lt;li&gt;Stored by the client and sent to the server&lt;/li&gt;
+&lt;li&gt;Target for hackers, why?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="authentication-2"&gt;Authentication&lt;/h2&gt;
+&lt;h3 id="how-2-hax-cookies"&gt;How 2 Hax Cookies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookies are used as authentication&lt;/li&gt;
+&lt;li&gt;Can be stolen using:
+&lt;ul&gt;
+&lt;li&gt;Cross-site scripting (XSS)&lt;/li&gt;
+&lt;li&gt;MITM attacks&lt;/li&gt;
+&lt;li&gt;Cross-site request forgery (CSRF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Can be forged (baked)
+&lt;ul&gt;
+&lt;li&gt;Poor implementation (e.g. incremental/plaintext)&lt;/li&gt;
+&lt;li&gt;Unsigned&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="authentication-3"&gt;Authentication&lt;/h2&gt;
+&lt;h3 id="protecting-the-cookie-jar"&gt;Protecting The Cookie Jar&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Expiry&lt;/li&gt;
+&lt;li&gt;HttpOnly (prevents XSS)&lt;/li&gt;
+&lt;li&gt;Secure (prevents MITM)&lt;/li&gt;
+&lt;li&gt;SameSite (prevents CSRF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="authorization"&gt;Authorization&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Controlling who has access to what (policy)&lt;/li&gt;
+&lt;li&gt;Principle of least privilege&lt;/li&gt;
+&lt;li&gt;Used with authentication to restrict access&lt;/li&gt;
+&lt;li&gt;Status Code &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"&gt;403&lt;/a&gt; Forbidden&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="idor"&gt;IDOR&lt;/h2&gt;
+&lt;p&gt;Insecure Direct Object Reference Vulnerability&lt;/p&gt;</description></item><item><title>03: Auth &amp; Trust</title><link>/week03/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week03/</guid><description>&lt;section data-noprocess data-shortcode-slide
+ class="center"&gt;
+ 
+&lt;h1 id="week03"&gt;Week03&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="feedback"&gt;Feedback&lt;/h2&gt;
+&lt;p&gt;less/same/more yapping?&lt;/p&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="report"&gt;Report&lt;/h2&gt;
+&lt;p&gt;Key things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Report Groups&lt;/li&gt;
+&lt;li&gt;Format&lt;/li&gt;
+&lt;li&gt;Due date + submission&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="important-parts"&gt;Important Parts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LINKED TABLE OF CONTENTS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Linked appendix for:
+&lt;ul&gt;
+&lt;li&gt;verbose definitions&lt;/li&gt;
+&lt;li&gt;screenshots&lt;/li&gt;
+&lt;li&gt;code&lt;/li&gt;
+&lt;li&gt;long payloads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Should address vulnerability, not flag&lt;/li&gt;
+&lt;li&gt;Memes only outside of content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="lectures"&gt;Lectures&lt;/h2&gt;
+&lt;p&gt;This is the law, watch.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="examples"&gt;Examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.offsec.com/reports/sample-penetration-testing-report.pdf"&gt;Professional&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.google.com/document/d/1dVXbABRPlAic2oNHqafXKrGmOYFSha-8_4kfLE_ilbQ/edit"&gt;Andrew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+&lt;h2 id="content"&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PKI
+&lt;ul&gt;
+&lt;li&gt;Certificates&lt;/li&gt;
+&lt;li&gt;Trust&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HSTS&lt;/li&gt;
+&lt;li&gt;Authentication
+&lt;ul&gt;
+&lt;li&gt;MFA&lt;/li&gt;
+&lt;li&gt;TOTP&lt;/li&gt;
+&lt;li&gt;SSO + OAuth + SAML (Extended)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secrets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="pki"&gt;PKI&lt;/h2&gt;
+&lt;p&gt;Public Key Infrastructure&lt;/p&gt;</description></item><item><title>04: Injection (pt 1)</title><link>/week04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week04/</guid><description>&lt;section data-noprocess data-shortcode-slide
+ class="center"&gt;
+ 
+&lt;h1 id="week04"&gt;Week04&lt;/h1&gt;
+&lt;p&gt;Thanks Lachlan and Andrew for some content&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="review"&gt;Review&lt;/h2&gt;
+&lt;p&gt;Any questions about previous content?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="content"&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Injection
+&lt;ul&gt;
+&lt;li&gt;SQLi&lt;/li&gt;
+&lt;li&gt;SSTI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SSRF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="injection"&gt;Injection&lt;/h2&gt;
+&lt;p&gt;Injection attacks occur when an attacker injects malicious data that is then used to control program behaviour&lt;/p&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="sql"&gt;SQL&lt;/h2&gt;
+&lt;p&gt;Structured Query Language&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Language for querying databases&lt;/li&gt;
+&lt;li&gt;Implementations include:
+&lt;ul&gt;
+&lt;li&gt;PostgreSQL&lt;/li&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;li&gt;SQLite&lt;/li&gt;
+&lt;li&gt;SQL Server (Microsoft)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="sql-statements"&gt;SQL Statements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SELECT _ FROM _ &amp;hellip;&lt;/li&gt;
+&lt;li&gt;INSERT INTO _ (COLn, &amp;hellip;) VALUES (VALn, &amp;hellip;)&lt;/li&gt;
+&lt;li&gt;UPDATE _ SET _ = _ &amp;hellip;&lt;/li&gt;
+&lt;li&gt;DELETE FROM _ &amp;hellip;&lt;/li&gt;
+&lt;li&gt;&amp;hellip; &amp;ndash; this is a comment&lt;/li&gt;
+&lt;li&gt;&amp;hellip; # this can also be a comment (sometimes)
+…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="sql-syntax"&gt;SQL Syntax&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WHERE&lt;/p&gt;</description></item><item><title>07: Client Side Injection</title><link>/week07/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week07/</guid><description>&lt;section data-noprocess data-shortcode-slide
+ class="center"&gt;
+ 
+&lt;h1 id="week07"&gt;week07&lt;/h1&gt;
+&lt;h3 id="comp6443"&gt;COMP6443&lt;/h3&gt;
+&lt;p&gt;Thanks Lachlan+Andrew for some of the slides&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="good-faith-policy"&gt;Good Faith Policy&lt;/h2&gt;
+&lt;p&gt;We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;TLDR: Don&amp;rsquo;t be a dick&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://sec.edu.au/good-faith-policy"&gt;sec.edu.au/good-faith-policy&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="questions"&gt;Questions?&lt;/h2&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="client-side-injection"&gt;Client Side Injection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;WWW
+&lt;ul&gt;
+&lt;li&gt;Everything is a document&lt;/li&gt;
+&lt;li&gt;Origin vs Site&lt;/li&gt;
+&lt;li&gt;HTML + JS&lt;/li&gt;
+&lt;li&gt;DOM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;XSS
+&lt;ul&gt;
+&lt;li&gt;Source + Sink&lt;/li&gt;
+&lt;li&gt;Goals&lt;/li&gt;
+&lt;li&gt;Exfiltration Methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CSRF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;WAF Bypass
+&lt;ul&gt;
+&lt;li&gt;Encoding&lt;/li&gt;
+&lt;li&gt;Other tricks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Prevention
+&lt;ul&gt;
+&lt;li&gt;CORS&lt;/li&gt;
+&lt;li&gt;SOP&lt;/li&gt;
+&lt;li&gt;CSP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="www"&gt;WWW&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;World Wide Web&lt;/li&gt;
+&lt;li&gt;Everything is a document
+&lt;ul&gt;
+&lt;li&gt;How those documents is client dependent&lt;/li&gt;
+&lt;li&gt;HTML, JS, VBScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="dom"&gt;DOM&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Document Object Model&lt;/li&gt;
+&lt;li&gt;An API for scripting languages to interact with web documents&lt;/li&gt;
+&lt;li&gt;document.cookie, location.url, window.onload,&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"&gt;Mozilla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;We use the DOM to access + exfiltrate info&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="html"&gt;HTML&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Static (on its own)&lt;/li&gt;
+&lt;li&gt;Tags
+&lt;ul&gt;
+&lt;li&gt;Paired: &lt;code&gt;&amp;lt;script&amp;gt;..&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Single: &lt;code&gt;&amp;lt;img .. /&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manipulating the tags in HTML is useful&lt;/li&gt;
+&lt;li&gt;HTML encoding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="js"&gt;JS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Adds dynamic functionality&lt;/li&gt;
+&lt;li&gt;Inline HTML using &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; or loaded &lt;a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html"&gt;externally&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Separate files&lt;/li&gt;
+&lt;li&gt;Interacts with the DOM
+&lt;ul&gt;
+&lt;li&gt;document.write()&lt;/li&gt;
+&lt;li&gt;document.getElementById()&lt;/li&gt;
+&lt;li&gt;document.cookie&lt;/li&gt;
+&lt;li&gt;window.localstorage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id="l33t-notes"&gt;l33t notes&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;HTML is cAsE INSEnSItive&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;script&amp;gt;...&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;img onerror=&amp;quot;...&amp;quot; src=&amp;quot;x&amp;quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;svg/&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;document.write()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fetch()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting"&gt;hacktricks.xyz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://portswigger.net/web-security"&gt;portswigger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/section&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h3 id="origin-vs-site"&gt;Origin vs Site&lt;/h3&gt;
+&lt;p&gt;What is an origin?&lt;/p&gt;</description></item></channel></rss>
