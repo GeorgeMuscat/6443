@@ -27,14 +27,14 @@ _TLDR: Don't be a dick_
 
 ## > whoami
 
--   George Muscat
--   Senior Security Engineering Consultant @ Asontu
+George Muscat
+Senior Security Engineering Consultant @ Asontu
 
 ---
 
 ## how to contact me
 
--   Email: g.muscat@unsw.edu.au
+Email: g.muscat@unsw.edu.au
 
 ---
 
@@ -69,7 +69,8 @@ _TLDR: Don't be a dick_
 
 ## Questions
 
--   Are tuts compulsory? No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can
+-   Are tuts compulsory? 
+    - No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can
 -   Where are these resources? [muscat.sh/6443]()
 
 ---
@@ -212,10 +213,6 @@ Hyper Text Transfer Protocol
 -   Method (GET/POST/PUT etc)
 
 ---
-
-{{% section %}}
-
-## {{% /section %}}
 
 ## Activities
 
