@@ -10,13 +10,12 @@ outputs: ['Reveal']
 
 ### COMP6443
 
-Thanks Lachlan+Andrew for some of the slides
 
 ---
 
 ## Good faith policy
 
-We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times
+We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.
 
 _TLDR: Don't be a dick_
 
@@ -29,15 +28,13 @@ _TLDR: Don't be a dick_
 ## > whoami
 
 -   George Muscat
--   4th Year CS (Security)
+-   Senior Security Engineering Consultant @ Asontu
 
 ---
 
 ## how to contact me
 
--   Email: g.muscat@unsw.edu.au <-- Official Stuff
--   Teams: George Muscat <-- Quicker Official Stuff
--   [@woop.xyz]() on the SecSoc Discord <-- Unofficial Stuff
+-   Email: g.muscat@unsw.edu.au
 
 ---
 
@@ -50,7 +47,7 @@ _TLDR: Don't be a dick_
 
 ## places for course discussion
 
--   EdStem Forum (found via WebCMS3) <-- Official
+-  Discourse <-- Official
 -   [secso.cc/discord](https://secso.cc/discord)
     -   #cs6443-6843
 
@@ -72,7 +69,7 @@ _TLDR: Don't be a dick_
 
 ## Questions
 
--   Are tuts compulsory? No
+-   Are tuts compulsory? No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can
 -   Where are these resources? [muscat.sh/6443]()
 
 ---
@@ -81,14 +78,20 @@ _TLDR: Don't be a dick_
 
 ## Course content
 
--   Wargames (10%)
--   2 x PenTesting reports (40%)
+-   Wargames (20%)
+-   2 x PenTesting reports (15% + 15%)
+    - Groups of 3 (can be cross tut)
 -   Mid-term (0%) (Ask if not sure)
 -   Final (50%)
+
+
+**Check WebCMS3 and first Lecture**
 
 ---
 
 ## Wargames
+
+-   marked individually
 
 -   don't leave them to the last minute, you'll be sad :(
 
@@ -103,7 +106,7 @@ _TLDR: Don't be a dick_
 ## Report
 
 -   pentesting / vulnerability report
-    -   groups of 3 in this tutorial
+    -   groups of 3
     -   **TAKE NOTES AS YOU GO**
     -   really important
 
@@ -125,7 +128,7 @@ Finding information about the target without interacting with the infra/site
 
 A.K.A OSINT
 
--   Google dorking
+-   Google Dorking
 -   Certificate records
 -   LinkedIn
 -   Shodan
@@ -198,15 +201,15 @@ These tools need wordlists, Seclists is a good place to start
 
 Hyper Text Transfer Protocol
 
--   First lecture!
+-   First lecture(s)!
 -   Format is important
 -   Headers are interesting and important
-    -   Method (GET/POST/PUT etc)
     -   Host
     -   Path
-    -   User-agent
-    -   Content-\[length/type\]
+    -   User-Agent
+    -   Content-\[Length/Type\]
     -   Origin
+-   Method (GET/POST/PUT etc)
 
 ---
 
@@ -217,14 +220,14 @@ Hyper Text Transfer Protocol
 ## Activities
 
 -   Finish installing burp suite & setting up certs
--   Signing up/logging into [ctfd.quoccabank.com]()
+-   Signing up/logging into [ctfd.quoccacorp.com]()
+-   [Intro challenges](https://github.com/secedu/COMP6443-intro-challenges)
 -   Try out some of the challenges!
-    -   Recon stuffs
 
 ---
 
 ## Demo
 
-> BurpSuite and ProxySwitchy oh my
+> BurpSuite
 
 ---
