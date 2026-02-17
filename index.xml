@@ -13,15 +13,11 @@
 
 &lt;section data-shortcode-section&gt;
 &lt;h2 id="-whoami"&gt;&amp;gt; whoami&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;George Muscat&lt;/li&gt;
-&lt;li&gt;Senior Security Engineering Consultant @ Asontu&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;George Muscat
+Senior Security Engineering Consultant @ Asontu&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="how-to-contact-me"&gt;how to contact me&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Email: &lt;a href="mailto:g.muscat@unsw.edu.au"&gt;g.muscat@unsw.edu.au&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Email: &lt;a href="mailto:g.muscat@unsw.edu.au"&gt;g.muscat@unsw.edu.au&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="useful-info"&gt;useful info&lt;/h2&gt;
 &lt;ul&gt;
@@ -55,7 +51,11 @@
 &lt;hr&gt;
 &lt;h2 id="questions"&gt;Questions&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Are tuts compulsory? No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can&lt;/li&gt;
+&lt;li&gt;Are tuts compulsory?
+&lt;ul&gt;
+&lt;li&gt;No, but I might be a bit biased and suggest that you come to all, or even multiple per week if you can&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Where are these resources? &lt;a href=""&gt;muscat.sh/6443&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
