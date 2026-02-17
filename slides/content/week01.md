@@ -217,7 +217,7 @@ Hyper Text Transfer Protocol
 
 ## Activities
 
--   Finish installing burp suite & setting up certs
+-   Finish installing Burp Suite & setting up certs
 -   Signing up/logging into [ctfd.quoccacorp.com](https://ctfd.quoccacorp.com)
 -   [Intro challenges](https://github.com/secedu/COMP6443-intro-challenges)
 -   Try out some of the challenges!
@@ -226,6 +226,4 @@ Hyper Text Transfer Protocol
 
 ## Demo
 
-> BurpSuite
-
----
+> Burp Suite
