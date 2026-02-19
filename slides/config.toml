@@ -2,7 +2,7 @@ title = "COMP6443"
 languageCode = "en-au"
 
 relativeURLs = true
-theme = "reveal-hugo"
+theme = ["reveal-hugo"]
 
 [markup.goldmark.renderer]
 unsafe = true
