@@ -24,4 +24,4 @@ minima:
     linkedin: george-muscat
 
 header_pages:
-  - index.md
+  - home.md
