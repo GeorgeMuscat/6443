@@ -22,7 +22,7 @@ title: list
     -   Comments (CTF moment)
     -   Endpoints (esp. hidden)
     -   Scripts
-        -   Relative path?
+        -   Relative  path?
         -   Where is the script from?
         -   CSP
             -   Nonce
@@ -78,4 +78,4 @@ title: list
 -   Processed HTML
 
 Epic payload:
--   '"<img src=x>{{ 1 + 1}}
+-   `'"<img src=x>{{ 1 + 1}}`
