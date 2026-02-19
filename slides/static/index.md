@@ -1,7 +1,6 @@
 ---
 layout: page
 title: COMP6443
-permalink: /6443
 ---
 
 ## slides
