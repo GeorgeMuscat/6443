@@ -2,26 +2,26 @@ title: ./muscat.sh
 name: George Muscat
 email: george@muscat.sh
 description: >- # this means to ignore newlines until "baseurl:"
-    Course Admin, Tutor and Computer Science Student @ UNSW.
-    Everything security.
-baseurl: '' # the subpath of your site, e.g. /blog
-url: 'https://muscat.sh/' # the base hostname & protocol for your site, e.g. http://example.com
+  Course Admin, Tutor and Computer Science Student @ UNSW.
+  Everything security.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://muscat.sh/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username: GeorgeMuscat
 
 theme: minima
 show_downloads: false
 github:
-    is_project_page: false
+  is_project_page: false
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
+  goldmark:
+    renderer:
+      unsafe: true
 minima:
-    skin: dark
-    social_links:
-        github: GeorgeMuscat
-        linkedin: george-muscat
+  skin: dark
+  social_links:
+    github: GeorgeMuscat
+    linkedin: george-muscat
 
 header_pages:
-    - home.md
+  - index.md
