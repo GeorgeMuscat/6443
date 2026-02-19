@@ -180,7 +180,6 @@ Things to know (or google):
 -   crt.sh
 -   DNS Dumpster
 -   Wayback Machine
--   Wolfram Alpha
 
 ---
 
