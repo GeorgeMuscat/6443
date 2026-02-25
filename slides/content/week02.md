@@ -10,8 +10,6 @@ outputs: ['Reveal']
 
 ### COMP6443
 
-Thanks Lachlan+Andrew for some of the slides
-
 ---
 
 ## Good Faith Policy
@@ -27,9 +25,8 @@ _TLDR: Don't be a dick_
 ## Admin
 
 -   Challenges
-    -   [WebCMS3](https://webcms3.cse.unsw.edu.au/COMP6443/24T1/resources/95202)
+  - [Marking](https://webcms3.cse.unsw.edu.au/COMP6443/26T1/resources/119416)
 -   Create report groups (will do later)
--   Correction: Points to not necessarily indicate difficulty
 
 ---
 
@@ -40,7 +37,6 @@ _TLDR: Don't be a dick_
     -   3 Blogs
     -   Files
     -   Support
--   Due Sunday 3/3
 
 ---
 
@@ -66,10 +62,10 @@ _TLDR: Don't be a dick_
 -   Factors of authentication are something you
     -   Know (e.g. Password)
     -   Are (e.g. Biometric)
-    -   Have (e.g. Hardware Key + Cookie)
+    -   Have (e.g. Hardware Key)
 -   Status Code [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) Unauthorized
-    -   When no valid authentication is sent
-
+    -   When no valid authentication is sent (yes i know it says unauthorized...)
+    
 ---
 
 ## Authentication
@@ -81,8 +77,8 @@ _TLDR: Don't be a dick_
     -   Session
     -   Authentication Token
     -   Ad tracking (still identification)
--   Set (and stored) by the server and sent to the client
--   Stored by the client and sent to the server
+-   Set (and _usually_ stored) by the server and sent to the client
+-   Stored by the browser and sent to the server in future requests
 -   Target for hackers, why?
 
 ---
@@ -95,10 +91,11 @@ _TLDR: Don't be a dick_
 -   Can be stolen using:
     -   Cross-site scripting (XSS)
     -   MITM attacks
-    -   Cross-site request forgery (CSRF)
 -   Can be forged (baked)
     -   Poor implementation (e.g. incremental/plaintext)
     -   Unsigned
+-   Poor cookie protection can be used using:
+    -   Cross-site request forgery (CSRF)
 
 ---
 
@@ -106,6 +103,7 @@ _TLDR: Don't be a dick_
 
 ### Protecting The Cookie Jar
 
+Cookie Settings
 -   Expiry
 -   HttpOnly (prevents XSS)
 -   Secure (prevents MITM)
@@ -116,8 +114,8 @@ _TLDR: Don't be a dick_
 ## Authorization
 
 -   Controlling who has access to what (policy)
--   Principle of least privilege
 -   Used with authentication to restrict access
+-   Principle of least privilege
 -   Status Code [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) Forbidden
 
 {{% /section %}}
@@ -145,7 +143,7 @@ Insecure Direct Object Reference Vulnerability
 -   Use non-deterministic ids (e.g. UUIDs)
 -   Strong authorisation policies
     -   Restrict access
-    -   Constantly verify
+    -   Constantly verify authZ/N
 
 {{% /section %}}
 
@@ -169,3 +167,4 @@ Note: _There will always be better tools, go find them_
 
 -   Did I miss something?
 -   More depth?
+-   Any intro challenge you want me to talk through?
