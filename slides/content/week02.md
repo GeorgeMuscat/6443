@@ -65,10 +65,26 @@ _TLDR: Don't be a dick_
     -   Have (e.g. Hardware Key)
 -   Status Code [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) Unauthorized
     -   When no valid authentication is sent (yes i know it says unauthorized...)
-    
+
+--- 
+
+## Passwords
+
+- Hashing
+  - One way function
+- Salting
+- Just use argon2 (or bcrypt)
+  
 ---
 
-## Authentication
+### MFA
+
+Multi-factor Authentication
+
+- TOTP
+  - QR Code
+
+--- 
 
 ### Cookies
 
@@ -82,8 +98,6 @@ _TLDR: Don't be a dick_
 -   Target for hackers, why?
 
 ---
-
-## Authentication
 
 ### How 2 Hax Cookies
 
@@ -99,8 +113,6 @@ _TLDR: Don't be a dick_
 
 ---
 
-## Authentication
-
 ### Protecting The Cookie Jar
 
 Cookie Settings
@@ -108,6 +120,8 @@ Cookie Settings
 -   HttpOnly (prevents XSS)
 -   Secure (prevents MITM)
 -   SameSite (prevents CSRF)
+
+{{% /section %}}
 
 ---
 
@@ -117,6 +131,44 @@ Cookie Settings
 -   Used with authentication to restrict access
 -   Principle of least privilege
 -   Status Code [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) Forbidden
+
+
+---
+
+## SSO
+
+
+Single-sign on
+
+- SAMLv2
+- OIDC
+- Outsources authentication to a trusted provider
+- Use this where possible
+
+---
+
+{{% section %}}
+
+## OAuth 2.0
+
+Standard to grant authorization to `Application A` to access resources on `Application B`
+
+---
+
+### OAuth 2.0
+
+- Examples:
+  - Google, Github, Discord
+- Able to be scoped to adhere to principal of least privilege
+- Allows for `Application A` to access resources you control on `Application B` without your password
+- Doesn't inherently provide *authentication*
+  - OIDC builds on OAuth 2.0 to provide authentication.
+
+---
+
+### OAuth 2.0 Flow
+
+![OAuth 2.0 Flow](https://upload.wikimedia.org/wikipedia/commons/7/72/Abstract-flow.png)
 
 {{% /section %}}
 
