@@ -145,48 +145,19 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id="authentication-1"&gt;Authentication&lt;/h2&gt;
-&lt;h3 id="cookies"&gt;Cookies&lt;/h3&gt;
+&lt;h2 id="passwords"&gt;Passwords&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Cookies are used for session persistence&lt;/li&gt;
-&lt;li&gt;Usually authentication data + other data
+&lt;li&gt;Hashing
 &lt;ul&gt;
-&lt;li&gt;Session&lt;/li&gt;
-&lt;li&gt;Authentication Token&lt;/li&gt;
-&lt;li&gt;Ad tracking (still identification)&lt;/li&gt;
+&lt;li&gt;One way function&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Set (and &lt;em&gt;usually&lt;/em&gt; stored) by the server and sent to the client&lt;/li&gt;
-&lt;li&gt;Stored by the browser and sent to the server in future requests&lt;/li&gt;
-&lt;li&gt;Target for hackers, why?&lt;/li&gt;
+&lt;li&gt;Salting&lt;/li&gt;
+&lt;li&gt;Just use argon2 (or bcrypt)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id="authentication-2"&gt;Authentication&lt;/h2&gt;
-&lt;h3 id="how-2-hax-cookies"&gt;How 2 Hax Cookies&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Cookies are used as authentication&lt;/li&gt;
-&lt;li&gt;Can be stolen using:
-&lt;ul&gt;
-&lt;li&gt;Cross-site scripting (XSS)&lt;/li&gt;
-&lt;li&gt;MITM attacks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Can be forged (baked)
-&lt;ul&gt;
-&lt;li&gt;Poor implementation (e.g. incremental/plaintext)&lt;/li&gt;
-&lt;li&gt;Unsigned&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Poor cookie protection can be used using:
-&lt;ul&gt;
-&lt;li&gt;Cross-site request forgery (CSRF)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id="authentication-3"&gt;Authentication&lt;/h2&gt;
-&lt;h3 id="protecting-the-cookie-jar"&gt;Protecting The Cookie Jar&lt;/h3&gt;
-&lt;p&gt;Cookie Settings&lt;/p&gt;</description></item><item><title>03: Auth &amp; Trust</title><link>/week03/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week03/</guid><description>&lt;section data-noprocess data-shortcode-slide
+&lt;h3 id="mfa"&gt;MFA&lt;/h3&gt;
+&lt;p&gt;Multi-factor Authentication&lt;/p&gt;</description></item><item><title>03: Auth &amp; Trust</title><link>/week03/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/week03/</guid><description>&lt;section data-noprocess data-shortcode-slide
  class="center"&gt;
  
 &lt;h1 id="week03"&gt;Week03&lt;/h1&gt;
