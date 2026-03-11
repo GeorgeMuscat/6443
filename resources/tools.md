@@ -3,6 +3,11 @@ layout: page
 title: tools
 ---
 
+## Learning
+
+-   [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/)
+-   [HackTricks](https://book.hacktricks.xyz/pentesting-web/xss-cross-site-scripting)
+
 ## General
 
 -   Write your own scripts!

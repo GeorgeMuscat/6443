@@ -162,9 +162,6 @@
  
 &lt;h1 id="week03"&gt;Week03&lt;/h1&gt;
 &lt;hr&gt;
-&lt;h2 id="feedback"&gt;Feedback&lt;/h2&gt;
-&lt;p&gt;less/same/more yapping?&lt;/p&gt;
-&lt;hr&gt;
 
 
 &lt;section data-shortcode-section&gt;
@@ -188,7 +185,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Should address vulnerability, not flag&lt;/li&gt;
-&lt;li&gt;Memes only outside of content&lt;/li&gt;
+&lt;li&gt;Use a platform that tracks edit history&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id="lectures"&gt;Lectures&lt;/h2&gt;
@@ -229,12 +226,12 @@
  class="center"&gt;
  
 &lt;h1 id="week04"&gt;Week04&lt;/h1&gt;
-&lt;p&gt;Thanks Lachlan and Andrew for some content&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="review"&gt;Review&lt;/h2&gt;
 &lt;p&gt;Any questions about previous content?&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="content"&gt;Content&lt;/h2&gt;
+&lt;p&gt;Server-side exploitation&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Injection
 &lt;ul&gt;
@@ -242,6 +239,8 @@
 &lt;li&gt;SSTI&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;LFI/LFD&lt;/li&gt;
+&lt;li&gt;File Upload&lt;/li&gt;
 &lt;li&gt;SSRF&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
