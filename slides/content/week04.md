@@ -8,8 +8,6 @@ outputs: ['Reveal']
 
 # Week04
 
-Thanks Lachlan and Andrew for some content
-
 ---
 
 ## Review
@@ -20,9 +18,12 @@ Any questions about previous content?
 
 ## Content
 
+Server-side exploitation
 -   Injection
     -   SQLi
     -   SSTI
+-   LFI/LFD
+-   File Upload
 -   SSRF
 
 ---
@@ -162,8 +163,6 @@ You should be asking:
 
 # Demo
 
-Thanks Andrew
-
 {{% / section %}}
 
 ---
@@ -229,8 +228,31 @@ Attacker requests:
 
 ## SSTI Demo
 
-Thanks Lachlan
+{{% / section %}}
 
+---
+
+{{% section %}}
+
+## LFI/LFD
+
+Local File (Inclusion|Disclosure)
+-   Server-side code allows user to access unintended files
+-   Can lead to (sometimes):
+  - Arbitrary code execution
+  - Source code disclosure
+  - Information leaks (e.g. envvars, /etc/passwd, general sensitive files)
+
+---
+
+## Examples
+
+```
+http://vulnerable_host/preview.php?file=../../../../etc/passwd
+https://php-lfd.quoccacorp.com/?page=../../../../../../password.txt
+```
+
+[more info]
 {{% / section %}}
 
 ---
@@ -268,5 +290,3 @@ Utilising functionalities of a server to access resources
     -   Local devices should NOT be assumed to be safe
 
 {{% / section %}}
-
----

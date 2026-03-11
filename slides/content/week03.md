@@ -10,12 +10,6 @@ outputs: ['Reveal']
 
 ---
 
-## Feedback
-
-less/same/more yapping?
-
----
-
 {{% section %}}
 
 ## Report
@@ -37,7 +31,7 @@ Key things:
     -   code
     -   long payloads
 -   Should address vulnerability, not flag
--   Memes only outside of content
+-   Use a platform that tracks edit history
 
 ---
 
