@@ -267,6 +267,16 @@ https://php-lfd.quoccacorp.com/?page=../../../../../../password.txt
 
 ---
 
+## File upload
+
+- Where can you upload files?
+- What can you do with them?
+  - Code execution
+- How are the files processed?
+- How are the files stored?
+
+---
+
 {{% section %}}
 
 ## SSRF
