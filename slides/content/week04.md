@@ -19,12 +19,22 @@ Any questions about previous content?
 ## Content
 
 Server-side exploitation
+- RCE
 -   Injection
     -   SQLi
     -   SSTI
 -   LFI/LFD
 -   File Upload
 -   SSRF
+
+---
+
+## RCE
+
+Remote Code Execution
+
+- Executing code on a remote host!!
+- Almost always critical
 
 ---
 
