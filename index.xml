@@ -233,6 +233,7 @@
 &lt;h2 id="content"&gt;Content&lt;/h2&gt;
 &lt;p&gt;Server-side exploitation&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;RCE&lt;/li&gt;
 &lt;li&gt;Injection
 &lt;ul&gt;
 &lt;li&gt;SQLi&lt;/li&gt;
@@ -242,6 +243,13 @@
 &lt;li&gt;LFI/LFD&lt;/li&gt;
 &lt;li&gt;File Upload&lt;/li&gt;
 &lt;li&gt;SSRF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="rce"&gt;RCE&lt;/h2&gt;
+&lt;p&gt;Remote Code Execution&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Executing code on a remote host!!&lt;/li&gt;
+&lt;li&gt;Almost always critical&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id="injection"&gt;Injection&lt;/h2&gt;
