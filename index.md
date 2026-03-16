@@ -3,6 +3,10 @@ layout: page
 title: COMP6443
 ---
 
+## Lectures
+
+  - [HTTP Request Smuggling](lec05)
+
 ## slides
 
 -   [week-01](week01)
