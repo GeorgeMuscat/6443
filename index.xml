@@ -434,7 +434,7 @@ p { text-align: left; }
 &lt;ul&gt;
 &lt;li&gt;Production systems are multi-hop:
 &lt;ul&gt;
-&lt;li&gt;CDN → WAF → reverse proxy → app server&lt;/li&gt;
+&lt;li&gt;e.g. CDN → WAF → reverse proxy → app server&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Each hop can parse HTTP differently&lt;/li&gt;
@@ -444,10 +444,33 @@ p { text-align: left; }
 
 
 &lt;section data-shortcode-section&gt;
-&lt;h2 id="rfc-grounding-http11"&gt;RFC grounding (HTTP/1.1)&lt;/h2&gt;
-&lt;p&gt;Key specs to know:&lt;/p&gt;
+&lt;h2 id="typical-http-request-handling"&gt;Typical HTTP Request Handling&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;RFC 9112&lt;/strong&gt; — HTTP/1.1 Message Syntax and Routing&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RFC 9110&lt;/strong&gt; — HTTP Semantics (fields, methods, status semantics)&lt;/li&gt;
+&lt;li&gt;Server listens on a socket that provides raw bytes&lt;/li&gt;
+&lt;li&gt;Server reads those bytes to a buffer and parses them into HTTP requests&lt;/li&gt;
+&lt;li&gt;If there are leftover bytes, the server leaves them in buffer to append future bytes received on the socket&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For smuggling, RFC 9112 framing rules are the core.&lt;/p&gt;</description></item></channel></rss>
+&lt;hr&gt;
+&lt;h2 id="basic-example"&gt;Basic Example&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-py" data-lang="py"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Accept an incoming connection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;client_connection, _ &lt;span style="color:#f92672"&gt;=&lt;/span&gt; listen_socket&lt;span style="color:#f92672"&gt;.&lt;/span&gt;accept()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Manually buffer the request data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;request_data &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;b&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# Receive bytes in chunks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; data &lt;span style="color:#f92672"&gt;=&lt;/span&gt; client_connection&lt;span style="color:#f92672"&gt;.&lt;/span&gt;recv(&lt;span style="color:#ae81ff"&gt;1024&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; request_data &lt;span style="color:#f92672"&gt;+=&lt;/span&gt; data
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# Check if the end of the HTTP headers is reached&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#e6db74"&gt;b&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;\r\n\r\n&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;in&lt;/span&gt; request_data:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# If this is a POST request, we would need to do more stuff here...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# parse request_data further&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;hr&gt;
+
+
+&lt;section data-shortcode-section&gt;
+&lt;h2 id="rfc-grounding-http11"&gt;RFC grounding (HTTP/1.1)&lt;/h2&gt;
+&lt;p&gt;Key specs to know:&lt;/p&gt;</description></item></channel></rss>
