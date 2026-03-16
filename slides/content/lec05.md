@@ -35,9 +35,42 @@ Email: g.muscat@unsw.edu.au
 ## Why this matters
 
 - Production systems are multi-hop:
-  - CDN → WAF → reverse proxy → app server
+  - e.g. CDN → WAF → reverse proxy → app server
 - Each hop can parse HTTP differently
 - One non-compliant parser in the chain can break end-to-end safety
+
+---
+
+{{% section %}}
+
+## Typical HTTP Request Handling
+
+- Server listens on a socket that provides raw bytes
+- Server reads those bytes to a buffer and parses them into HTTP requests
+- If there are leftover bytes, the server leaves them in buffer to append future bytes received on the socket
+
+---
+
+## Basic Example
+
+```py
+# Accept an incoming connection
+client_connection, _ = listen_socket.accept()
+
+# Manually buffer the request data
+request_data = b""
+while True:
+    # Receive bytes in chunks
+    data = client_connection.recv(1024)
+    request_data += data
+    # Check if the end of the HTTP headers is reached
+    if b'\r\n\r\n' in request_data:
+        # If this is a POST request, we would need to do more stuff here...
+        break
+# parse request_data further
+```
+
+{{% / section %}}
 
 ---
 
@@ -113,7 +146,7 @@ Backend uses `Transfer-Encoding`
 - frontend effectively ignores `Transfer-Encoding`
 - backend decodes chunked framing
 
-This violates consistent RFC framing handling across hops and causes leftover bytes to become a smuggled request.
+This causes leftover bytes to become a smuggled request.
 
 ---
 
@@ -137,8 +170,6 @@ Both claim to support `Transfer-Encoding`, but differ in parsing details:
 - casing/whitespace quirks
 - invalid codings tolerated by one parser, rejected by another
 - different behavior for malformed chunk extensions/terminators
-
-This is usually RFC non-compliance or non-uniform normalization.
 
 {{% / section %}}
 
