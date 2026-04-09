@@ -10,18 +10,6 @@ outputs: ['Reveal']
 
 ### COMP6443
 
-Thanks Lachlan+Andrew for some of the slides
-
----
-
-## Good Faith Policy
-
-We expect a high standard of professionalism from you at all times while you are taking any of our courses. We expect all students to act in good faith at all times.
-
-_TLDR: Don't be a dick_
-
-[sec.edu.au/good-faith-policy](https://sec.edu.au/good-faith-policy)
-
 ---
 
 ## Questions?
@@ -171,28 +159,22 @@ site = <u><span style="color: #00b050">dom</span><span style="color: #007133">ai
 
 #### Reflected XSS
 
-The payload is part of user input
-_(i.e. URL bar, inside a cookie, etc)_
-
-> Demo: [`Reflected XSS`](http://localhost:3000/reflected?q=%3Cimg+onerror%3D%22alert%28%27pwned%21%27%29%22+src%3D%22http%3A%2F%2Fgoogle.com%22%3E)
-
-Who'd click on them though....
-But also like, link shorteners...
-But also like, "..."
+The payload is part of a HTTP request, that is injected in the immediate HTTP response.
+- GET request parameters
+- Cookies
+- POST request body
 
 ---
 
 #### Stored XSS
 
-The payload is stored in some sort of database.
+The payload is stored serverside (e.g. file or database).
 
-Arguably more dangerous...
-Anyone who opens a page that returns content from that same database may be victim to a stored XSS attack
+Typically more dangerous than reflected.
+Anyone who opens a page that returns content from that same database may be victim to a stored XSS attack.
 
 -   Twitter Self Retweeting
 -   Myspace 'Samy' Worm
-
-> Demo: Stored XSS
 
 ---
 
@@ -247,11 +229,6 @@ iframes, sandbox, seamless, etc...
 
 Link: [GitHub](https://github.com/featherbear/UNSW-CompClub2019Summer-CTF/commit/778c26087f0f6baa7b286037b4fe162aefd4ad67)
 
-<!--
-https://github.com/featherbear/UNSW-CompClub2019Summer-CTF/commit/778c26087f0f6baa7b286037b4fe162aefd4ad67
-https://github.com/featherbear/UNSW-CompClub2019Summer-CTF/commit/7b6e5875f31fc1c12da9fbd9e149e833130fd4e2
--->
-
 {{% /section %}}
 
 ---
@@ -263,35 +240,14 @@ https://github.com/featherbear/UNSW-CompClub2019Summer-CTF/commit/7b6e5875f31fc1
 
 ---
 
+{{% section %}}
+
 ### CSRF
 
-{{% section %}}
 
 Cross site request forgery
 
-> "Heyyyy, look <a class="sparkle">here</a> 🥺 👉👈"
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="https://evejweinberg.github.io/sparkleHover/sparkleHover.js"></script>
-
-<script>
-    for (let elem of document.getElementsByClassName('sparkle')) {
-        $(elem).sparkleHover({
-            colors : ['#297E97', "#2EB8D5",'#36BEC1'],
-            num_sprites: 22,
-            lifespan: 3000,
-            radius: 500,
-            sprite_size: 40,
-            shape: 'circle',
-            image: 'http://loganchamber.org/files/Pumplin.jpg'
-
-        })
-    }
-</script>
-
 Tricking a user into making requests they didn't intend, sending data and loading attacker controlled documents
-
-![](https://featherbear.cc/tutoring-unsw-21t2-cs6443-cs6843/week7-shared/Snipaste_2021-07-15_05-25-43.png)
 
 ---
 
@@ -302,7 +258,7 @@ Stop CSRF attempts by supplying the user with a single-use 'nonce' value.
 -   When the page loads, a nonce is included
     -   e.g. cookie, header, HTML form
 -   The nonce must be passed in the request
--   Should be random and single use
+-   Should be random and single use (per request OR per session, depending on system design)
 
 _Can't forge a request if you don't know the nonce before hand... sort of..._
 
@@ -367,26 +323,66 @@ Generally XSS is performed in the background
 
 ---
 
-## CORS
-
-## [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-
--   Default browser behaviour to prevent sharing cross origin
-    -   So cookies/local storage aren't shared
--   Set in HTTP headers
--   Set which origins other than its own that can load its resources
--   Used with SOP
-
----
-
 ## SOP
 
 [Same-Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
 
+-   Default protection in browsers
 -   Restricts how resources from origin A (e.g. script) can interact with a resource from origin B
--   Applies only to scripts
-    -   Can use non-scripting attacks to beat
--   Used with CORS
+-   Typically allows embedding/using the resource, but doesn't allow "reading" from javascript.
+  - For example you can load & execute JS hosted at CDN.com/code.js on sitea.com, but you cannot read the contents of code.js within Javascript on sitea.com
+  - [more info](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access)
+-   Used with CORS to make sites functional but secure
+
+---
+
+{{% section %}}
+
+## CORS
+
+## [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+-   Allows the server to specify to the client what parts of the SOP it needs to relax/ignore
+-   Set in HTTP headers
+-   Tells clients which sites (e.g. siteb.com) are allowed to read resources from itself (sitea.com)
+-   Browser uses preflight requests to check for CORS policies before making further requests
+-   Bad devs often set overly permissive CORS policies
+
+---
+
+## Example
+
+- We host the frontend on `https://app.example.com/`
+- The frontend interacts with an API hosted at `https://api.example.com/`
+- SOP will block requests to this by default
+- We need to use CORS to allow this.
+
+
+---
+
+Preflight response headers (repsonse to an OPTIONS request to `https://api.example.com/`):
+```http
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization, X-Request-ID
+Access-Control-Max-Age: 600
+Vary: Origin
+```
+
+
+---
+
+Response to actual request (e.g. PUT,POST)
+```http
+Content-Type: application/json
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: X-Request-ID, X-RateLimit-Remaining
+Vary: Origin
+```
+
+{{% /section %}}
 
 ---
 
